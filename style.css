@@ -1,0 +1,16 @@
+
+body {
+background: #ffceeb;   
+}
+
+main {
+    background: lightcyan;
+    width: 40em;
+    margin-inline: auto;
+  }
+  
+  main img{
+    max-width: 100%;
+    display: block;  
+  }
+  
