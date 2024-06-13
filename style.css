@@ -1,16 +1,125 @@
 
-body {
-background: #ffceeb;   
+/* Load Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+/* Diagnostic */
+* {
+  outline: 1px soli steelblue;
 }
 
+/* Style Tile with css variables */
+:root {
+  --color1: #643D0E;
+  --color2: #FCEEF1;
+  --color3: #6B81E4;
+  --color4: #F08CA4;
+  --font1: "Karla";
+  --font2: "Inconsolata";
+}
+
+
+/* wrapper */
 main {
-    background: lightcyan;
-    width: 40em;
-    margin-inline: auto;
+  color: var(--color1);
+  background: var(--color2);
+    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body{
+  background: var(--color2);
+  padding: 25px;
+}
+
+article {
+  font-family: var(--font1);
+}
+
+/* on hover left colum, no background image */
+span:hover {
+  color: var(--color4);
+}
+
+h1 {
+  font-family: var(--font1);
+  font-size: 2em;
+  
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+h2 {
+  font-family: var(--font1);
+  text-align: center;
+}
+
+p {
+  font-family: var(--font2);
+  
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+a {
+  color: var(--color3);
+}
+
+a:hover {
+  color: var(--color4);
+}
+
+
+/* Article */
+article {
+  display: flex;
+  flex-direction: column;
+  /* main axis   */
+  justify-content: center;
+  /* cross axis   */
+  align-items: center;
+  
+  padding: 2em;
+}
+
+
+/* aside image */
+aside img { 
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
+
+  /* full height     */
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+@media (max-width: 480px ) {
+  
+  body {
+    background: var(--color2);
   }
   
-  main img{
-    max-width: 100%;
-    display: block;  
+  main {
+      grid-template-columns: 1fr;
   }
+  
+  article nav a {
+    display: block;
+    margin: 1em 0 1em 0;
+  }
+  
+  p span {
+    float: none;  
+  }
+  
+}
   
